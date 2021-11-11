@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>My Lists</h1>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2918&q=80)">
+          <%= list.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "Add a new list", new_list_path, class: "btn btn-primary" %>
+</div>
