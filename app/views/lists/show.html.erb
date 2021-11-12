@@ -1,6 +1,10 @@
 <div class="container">
-  <h1><%= @list.name %></h1>
-  <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
+  <div class="header">
+    <h1><%= @list.name %></h1>
+    <div>
+      <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
+    </div>
+  </div>
   <div class="bookmark-cards">
     <% @bookmarks.each do |bookmark| %>
       <div class="card-trip">
@@ -12,8 +16,7 @@
             <br>
             <p><i class="fas fa-quote-left"></i> <%= bookmark.comment %> <i class="fas fa-quote-right"></i></p>
           </div>
-          <h2 class="card-trip-pricing"> <%= bookmark.movie.rating %>/10</h2>
-          <p><%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }%></p>
+          <p class="card-trip-pricing"> <%= bookmark.movie.rating %>/10 <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }%></p>
         </div>
       </div>
     <% end %>

@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
