@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @list.name %></h1>
+  <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
   <div class="bookmark-cards">
     <% @bookmarks.each do |bookmark| %>
       <div class="card-trip">
